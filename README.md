@@ -1,2 +1,2 @@
-# my-static-website
+# EtherDi
 A static website.
