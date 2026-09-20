@@ -1,15 +1,13 @@
 function updClock(){
-    const now = Date.now();
+    const now = new Date();
     
-    const hour = Math.floor(now/3600/1000) % 24;
+    let hour = now.getHours();
     if (hour < 10) hour = '0' + hour.toString();
-    const minutes = Math.floor(now/60/1000) % 60;
+    let minutes = now.getMinutes();
     if (minutes < 10) minutes = '0' + minutes.toString();
-    const seconds = Math.floor(now/1000) % 60;
+    let seconds = now.getSeconds();
     if (seconds < 10) seconds = '0'+seconds.toString();
 
-
-    const timeString = now;
 
     document.getElementById("clock").textContent = "Here's time for you: " + hour + ':' + minutes + ':' + seconds; 
 }
